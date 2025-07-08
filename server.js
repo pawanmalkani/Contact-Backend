@@ -10,10 +10,9 @@ const PORT = process.env.PORT || 3000;
 // ✅ Allow only your frontend (GitHub Pages or local dev)
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",             // for local development
-      "https://pawanmalkani.github.io"     // your deployed frontend (update if needed)
-    ],
+    origin: ["http://localhost:5173", "https://pawanmalkani.github.io"],
+    methods: ["POST", "GET"],
+    credentials: true,
   })
 );
 
